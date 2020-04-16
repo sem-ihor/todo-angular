@@ -1,0 +1,25 @@
+<div class="finder">
+  <div class="finder__block">
+    <img
+      class="finder__sortDate"
+      src="../../../assets/img/sort.svg"
+      (click)="taskSvc.sortTodolist('date')"
+      alt="sort date">
+    <img
+      class="finder__sortPriority"
+      src="../../../assets/img/sortNumber.svg"
+      (click)="taskSvc.sortTodolist('importance')"
+      alt="sort priority">
+  </div>
+
+  <div class="finder__mainBlock">
+    <input class="finder__find" maxlength="256" type="text" [(ngModel)]="search">
+
+    <img
+      class="finder__btnSearch"
+      src="../../../assets/img/filter.svg"
+      (click)="taskSvc.sortTodolist('done')"
+      alt="sort done">
+  </div>
+
+</div>

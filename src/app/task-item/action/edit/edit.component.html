@@ -1,0 +1,18 @@
+<div class="backdrop">
+
+  <div class="edit">
+    <p class="edit__title">Edit text</p>
+
+    <textarea
+      class="edit__text"
+      cols="30" rows="10"
+      placeholder="New text of todo item..."
+      [(ngModel)]="text"></textarea>
+
+    <div class="edit__box">
+      <button class="edit__btn" (click)="save()">SAVE</button>
+      <button class="edit__btn" (click)="cancel()">CANCEL</button>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 20px 0 20px;
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  &__inputer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  &__block {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    margin-right: 10px;
+    width: 70%;
+    border: none;
+    border-bottom: 2px solid #dcdcdc;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    width: 120px;
+    height: 35px;
+    background: #0097f4;
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(0, 147, 236, 0.58);
+    }
+  }
+}

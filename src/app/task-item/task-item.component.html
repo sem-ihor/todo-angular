@@ -1,0 +1,46 @@
+<div class="list">
+  <div class="list__rightBlock">
+    <div class="list__block1">
+      <div class="list__data">
+        <strong>{{task.date | date:'dd.MM.yyyy'}}</strong>
+        <p>{{task.date | date: 'HH:mm'}}</p>
+      </div>
+      <div class="list__num">{{task.important}}</div>
+    </div>
+
+    <div class="list__control">
+      <img
+        class="list__up"
+        src="../../assets/img/up.svg"
+        (click)="increment()"
+        alt="up">
+      <img
+        class="list__down"
+        src="../../assets/img/down.svg"
+        (click)="decrement()"
+        alt="down">
+    </div>
+  </div>
+
+
+  <p [ngClass]="{'active': this.task.isDone}" class="list__item">{{task.content}}</p>
+
+  <div class="list__block">
+    <img
+      class="list__img"
+      src="../../assets/img/btnEdit.png"
+      (click)="edit(index)"
+      alt="edit">
+    <img
+      class="list__img"
+      src="../../assets/img/bthCheck.png"
+      (click)="check()"
+      alt="check">
+    <img
+      class="list__img"
+      src="../../assets/img/btnDelete.png"
+      (click)="remove(index)"
+      alt="delete">
+  </div>
+
+</div>

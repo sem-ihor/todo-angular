@@ -1,0 +1,34 @@
+<div class="container">
+
+  <div>
+    <app-task-add></app-task-add>
+  </div>
+
+  <app-action (onSearch)="search($event)"></app-action>
+
+  <div class="repository">
+    <app-task-item
+      *ngFor="let item of items$ | async | filter:searching; let idx = index"
+      (onAction)="changeAction($event)"
+      [index]="idx"
+      [task]="item"
+    >
+    </app-task-item>
+  </div>
+
+
+  <h4 *ngIf="(items$ | async)?.length === 0">List is empty</h4>
+
+  <div [ngSwitch]="targetAction.action">
+    <app-remove
+      *ngSwitchCase="'remove'"
+      (onAction)="remove($event)"
+    ></app-remove>
+
+    <app-edit
+      *ngSwitchCase="'edit'"
+      (onAction)="edit($event)"
+    ></app-edit>
+  </div>
+
+</div>

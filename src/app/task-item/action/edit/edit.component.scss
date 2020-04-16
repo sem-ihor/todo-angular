@@ -1,0 +1,60 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.73);
+}
+
+.edit {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10rem;
+  background: #cccccc;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  &__title {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  &__text {
+    border: none;
+    margin: 0 26px 0;
+    background: #f5f0f0;
+    font-size: 15px;
+    outline: none;
+    resize: none;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    color: #0097f4;
+    border: none;
+    font-size: 15px;
+    background: none;
+    width: 86px;
+    height: 32px;
+    outline: none;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    &:hover {
+      background: #0097f4;
+      color: #fff;
+      -webkit-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+}
